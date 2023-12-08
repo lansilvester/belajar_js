@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;600;700&family=Shadows+Into+Light&family=Whisper&display=swap');
+
+        h1,h5{
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background: #eade00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1{
+            font-weight: 700;
+            color:#006517;
+            font-size:5em;
+        }
+        .container{
+            /* background-color: aliceblue; */
+            padding:2em;
+            border-radius: 1em;
+        }
+        .btn{
+            text-decoration: none;
+            background-color: white;
+            padding:.3em 2em;
+            margin:0px 1em;
+            font-size:3em;
+            border-radius:1em;
+            box-shadow: 0px 3px 10px 2px rgb(255, 183, 0);
+            line-height: 3em;
+            transition: all 0.3s ease-in-out; /* Transisi efek untuk animasi */
+        }
+        .btn:hover {
+            box-shadow: 0 0 20px 5px rgb(255, 183, 0); /* Animasi box-shadow */
+        }
+        .tombol{
+            text-align: center;
+        }
+        #yes{
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 700;
+            color:#ff5e78;
+        }
+        #yes:hover{
+            transform: scale(1.5);
+            background: #ff5e78;
+            color:white;
+        }
+        #no{
+            font-family: 'Shadows Into Light', cursive;
+            font-size:1em;
+            opacity:.5;
+        }
+        img{
+            position: absolute;
+            top:10%;
+            z-index:-5;
+            border-radius:50%;
+            opacity: .3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            DO YOU LIKE ME?
+        </h1>
+        <marquee behavior="" direction="">
+
+            <h5>
+                <i>click this btn bellow</i>
+            </h5>
+        </marquee>
+        <div class="tombol">
+
+            <a href="#" class="btn" id="yes" >YES</a>
+            <a href="#" class="btn" id="no" onmouseover="moveButton()">NO</a>
+        </div>
+
+        <marquee behavior="" direction="">
+        </marquee>
+    </div>
+        <img src="https://media.licdn.com/dms/image/D4E03AQFmxLqRR6NjXQ/profile-displayphoto-shrink_800_800/0/1686840709035?e=1707350400&v=beta&t=TyeSnS2retwEnZ96pRaM6-F7i5723Lm7Q6i8QQBe15g" alt="" width="200px">
+
+    <script>
+        function moveButton() {
+            var no_el = document.getElementById('no');
+            var randomX = Math.floor(Math.random() * window.innerWidth);
+            var randomY = Math.floor(Math.random() * window.innerHeight);
+
+            no_el.style.position = 'absolute';
+            no_el.style.left = randomX + 'px';
+            no_el.style.top = randomY + 'px';
+        }
+    </script>
+</body>
+</html>
