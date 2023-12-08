@@ -85,7 +85,7 @@
         </marquee>
         <div class="tombol">
 
-            <a href="#" class="btn" id="yes" >YES</a>
+            <a href="#" class="btn" id="yes"  onclick="sendWhatsAppMessage()">YES</a>
             <a href="#" class="btn" id="no" onmouseover="moveButton()">NO</a>
         </div>
 
@@ -94,7 +94,19 @@
     </div>
         <img src="https://media.licdn.com/dms/image/D4E03AQFmxLqRR6NjXQ/profile-displayphoto-shrink_800_800/0/1686840709035?e=1707350400&v=beta&t=TyeSnS2retwEnZ96pRaM6-F7i5723Lm7Q6i8QQBe15g" alt="" width="200px">
 
-    <script>
+   
+     <script>
+        function sendWhatsAppMessage() {
+            // Ganti nomor WhatsApp dengan nomor target Anda
+            var phoneNumber = '+6289694866639';
+            
+            // Pesan yang akan dikirim
+            var message = 'Hey babe, ayo ngedate 💕';
+
+            // Membuka link Click to Chat WhatsApp dengan nomor dan pesan tertentu
+            window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
         function moveButton() {
             var no_el = document.getElementById('no');
             var randomX = Math.floor(Math.random() * window.innerWidth);
